@@ -33,3 +33,27 @@ To deploy and test these microservices locally inside a Kubernetes cluster (e.g.
    kubectl get all
 4. Uninstall the Release (Cleanup):
    helm uninstall ecommerce-release
+
+
+
+---
+
+🚀🚀### Deployment Guide using Cluster:
+
+To deploy and test these microservices directly using raw Kubernetes cluster manifests (without Helm):
+
+
+1. Build Docker Images inside your local cluster environment:
+   docker build -t inventory-service:latest -f Dockerfile.inventory .
+   docker build -t order-service:latest -f Dockerfile.order .
+2. Apply Kubernetes Manifests for both services:
+   kubectl apply -f k8s/inventory-deployment.yaml
+   kubectl apply -f k8s/order-deployment.yaml
+3. Verify Deployments, Pods, and Services are running successfully:
+   kubectl get pods
+   kubectl get services
+4. Clean up and delete resources when done:
+   kubectl delete -f k8s/inventory-deployment.yaml
+   kubectl delete -f k8s/order-deployment.yaml
+
+   
