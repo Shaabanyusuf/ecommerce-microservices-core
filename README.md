@@ -11,12 +11,18 @@ The system consists of two decoupled microservices:
 ## Project Structure
 
 ```
-├── inventory-service/       # Inventory microservice source code & dependencies
-├── order-service/           # Order microservice source code & dependencies
 ├── helm/
 │   └── ecommerce-chart/     # Helm chart for deploying the entire architecture
+├── inventory-service/       # Inventory microservice source code & dependencies
+├── k8s/                     # Raw Kubernetes cluster deployment manifests
+│   ├── inventory-deployment.yaml
+│   └── order-deployment.yaml
+├── order-service/           # Order microservice source code & dependencies
 ├── Dockerfile.inventory     # Docker image build file for inventory service
-└── Dockerfile.order         # Docker image build file for order service
+├── Dockerfile.order         # Docker image build file for order service
+└── README.md                # Project documentation file
+
+
 ```
 
 🚀 ##Deployment Guide using Helm:
