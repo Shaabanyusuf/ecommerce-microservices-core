@@ -19,8 +19,11 @@ The system consists of two decoupled microservices:
 └── Dockerfile.order         # Docker image build file for order service
 ```
 
-🚀 Deployment Guide using Helm:
+🚀 ##Deployment Guide using Helm:
+
 To deploy and test these microservices locally inside a Kubernetes cluster (e.g., Minikube or Kind):
+
+
 1. Build Docker Images inside your cluster:
    docker build -t inventory-service:latest -f Dockerfile.inventory .
    docker build -t order-service:latest -f Dockerfile.order .
