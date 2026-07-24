@@ -1,0 +1,9 @@
+inventory:
+  replicaCount: 2
+  image: inventory-service:latest
+  port: 5001
+
+order:
+  replicaCount: 2
+  image: order-service:latest
+  port: 5002
